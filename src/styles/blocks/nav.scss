@@ -1,0 +1,26 @@
+.nav {
+  @include padding-inline;
+
+
+  &__list {
+    margin-bottom: 50px;
+    gap: 25px;
+
+    @include page-grid;
+  }
+
+  &__item {
+    grid-column: 1 / -1;
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    line-height: 20px;
+    color: $nav-text-color;
+  }
+
+  &--margin-top {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,68 @@
+.buttons {
+  display: flex;
+  flex-direction: column;
+  font-family: Helvetica Neue, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 300;
+
+  @include on-phone {
+    &--margin-right {
+      display: none;
+      margin-right: 30px;
+    }
+  }
+
+  @include on-laptop {
+    display: flex;
+  }
+
+  &__group {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__button {
+    text-decoration: inherit;
+    line-height: 16.93px;
+    text-transform: uppercase;
+    color: $spec-color;
+  }
+
+  &__lang {
+    text-decoration: inherit;
+    line-height: 18px;
+    color: $lang-color-def;
+
+    &--active {
+      font-weight: 400;
+      color: $lang-color-active;
+    }
+  }
+
+  &__buy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    background-color: $buy-button-bgc;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+
+    transition: all 0.3s;
+
+    @include on-phone {
+      margin-top: 162px;
+      width: 260px;
+      margin-bottom: 30px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 14.65px;
+    }
+
+    &:hover {
+      background-color: $buy-button-bgc-hover;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.header {
+  &__content {
+    @include page-grid;
+  }
+
+  &__article {
+    @include padding-inline;
+
+    grid-column: 1 / -1;
+  }
+
+  &__image {
+    margin-bottom: 40px;
+    width: 320px;
+    height: 245px;
+    background: url(../images/crazy-baby.png) no-repeat left/cover;
+
+    grid-column: 1 / -1;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 52px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

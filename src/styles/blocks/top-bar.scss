@@ -1,0 +1,32 @@
+.top-bar {
+  display: flex;
+  padding: 22px 30px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo-link {
+    display: flex;
+  }
+
+  &__logo {
+    height: 26px;
+    width: 161px;
+  }
+
+  &__icon {
+    display: block;
+    height: 24px;
+    width: 24px;
+
+    &--burger-menu {
+      width: 32px;
+      height: 32px;
+      background: url(../images/icons/icon-burger-menu.png) no-repeat
+        center/cover;
+    }
+
+    &--close {
+      background: url(../images/icons/icon-close.png) no-repeat center/cover;
+    }
+  }
+}

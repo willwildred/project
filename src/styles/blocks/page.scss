@@ -1,0 +1,33 @@
+.page {
+  &:has(&__menu:target) {
+    overflow: hidden; /* not to scroll the page */
+  }
+
+  &__body {
+    font-family: Inter, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: $global-bg-color;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+
+    transition: all 0.3s;
+    opacity: 0;
+    transform: translateX(-100%);
+    pointer-events: none;
+
+    background-color: $global-bg-color;
+
+    &:target {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+  }
+}
